@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:something/authenication_services.dart';
 class ChangePasswordPage extends StatefulWidget {
   const ChangePasswordPage({super.key});
 
@@ -66,76 +68,76 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                             ),
                           ),
                         ),
+                        // SizedBox(
+                        //   height: 15,
+                        // ),
+                        // Padding(
+                        //   padding: const EdgeInsets.only(left: 12, right:12,),
+                        //   child: TextFormField(
+                        //     style: TextStyle(color: Colors.white),
+                        //     cursorColor: Colors.white30,
+                        //     controller: passwordText,
+                        //     keyboardType: TextInputType.visiblePassword,
+                        //     obscureText:_obscureText,
+                        //     decoration: InputDecoration(
+                        //       focusedBorder: UnderlineInputBorder(
+                        //         borderSide: BorderSide(
+                        //           color: Colors.green.shade800),
+                        //       ),
+                        //       enabledBorder: UnderlineInputBorder(
+                        //         borderSide: BorderSide(
+                        //           color: Colors.white),
+                        //       ),
+                        //       prefixIcon:Icon(Icons.lock, color:Colors.white70),
+                        //       border: OutlineInputBorder(),
+                        //       label: Text('Current Password',style: TextStyle(color:Colors.white70),),
+                        //       suffixIcon:IconButton(
+                        //         onPressed: (){
+                        //           setState(() {
+                        //             _obscureText = !_obscureText;
+                        //           });
+                        //         },
+                        //         icon: Icon(_obscureText?Icons.visibility:Icons.visibility_off , color:Colors.white70),
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
+                        // SizedBox(
+                        //   height: 8,
+                        // ),
+                        // Padding(
+                        //   padding: const EdgeInsets.only(left: 12, right:12,),
+                        //   child: TextFormField(
+                        //     style: TextStyle(color: Colors.white),
+                        //     cursorColor: Colors.white30,
+                        //     controller: passwordText,
+                        //     keyboardType: TextInputType.visiblePassword,
+                        //     obscureText:_obscureText,
+                        //     decoration: InputDecoration(
+                        //       focusedBorder: UnderlineInputBorder(
+                        //         borderSide: BorderSide(
+                        //           color: Colors.green.shade800),
+                        //       ),
+                        //       enabledBorder: UnderlineInputBorder(
+                        //         borderSide: BorderSide(
+                        //           color: Colors.white),
+                        //       ),
+                        //       prefixIcon:Icon(Icons.lock, color:Colors.white70),
+                        //       border: OutlineInputBorder(),
+                        //       label: Text('New Password',style: TextStyle(color:Colors.white70),),
+                        //       suffixIcon:IconButton(
+                        //         onPressed: (){
+                        //           setState(() {
+                        //             _obscureText = !_obscureText;
+                        //           });
+                        //         },
+                        //         icon: Icon(_obscureText?Icons.visibility:Icons.visibility_off , color:Colors.white70),
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
                         SizedBox(
-                          height: 15,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 12, right:12,),
-                          child: TextFormField(
-                            style: TextStyle(color: Colors.white),
-                            cursorColor: Colors.white30,
-                            controller: passwordText,
-                            keyboardType: TextInputType.visiblePassword,
-                            obscureText:_obscureText,
-                            decoration: InputDecoration(
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.green.shade800),
-                              ),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.white),
-                              ),
-                              prefixIcon:Icon(Icons.lock, color:Colors.white70),
-                              border: OutlineInputBorder(),
-                              label: Text('Current Password',style: TextStyle(color:Colors.white70),),
-                              suffixIcon:IconButton(
-                                onPressed: (){
-                                  setState(() {
-                                    _obscureText = !_obscureText;
-                                  });
-                                },
-                                icon: Icon(_obscureText?Icons.visibility:Icons.visibility_off , color:Colors.white70),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 12, right:12,),
-                          child: TextFormField(
-                            style: TextStyle(color: Colors.white),
-                            cursorColor: Colors.white30,
-                            controller: passwordText,
-                            keyboardType: TextInputType.visiblePassword,
-                            obscureText:_obscureText,
-                            decoration: InputDecoration(
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.green.shade800),
-                              ),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.white),
-                              ),
-                              prefixIcon:Icon(Icons.lock, color:Colors.white70),
-                              border: OutlineInputBorder(),
-                              label: Text('New Password',style: TextStyle(color:Colors.white70),),
-                              suffixIcon:IconButton(
-                                onPressed: (){
-                                  setState(() {
-                                    _obscureText = !_obscureText;
-                                  });
-                                },
-                                icon: Icon(_obscureText?Icons.visibility:Icons.visibility_off , color:Colors.white70),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 37,
+                          height: 20,     //37
                         ),
                       ],
                     ),
@@ -149,14 +151,24 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14),),
                       padding: EdgeInsets.only(top: 10, bottom: 10, left: 104, right: 104,),
                     ),
-                    child: Text('Change Password',style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600, )),
+                    child: Text('Send Email',style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600, )),
                     onPressed: (){
-                    //String userEmail = emailText.text.toString();
-                    //String userPassword = passwordText.text;
-        
-                    // print("Email =$emailText\nPassword=$passwordText");
-                    // Navigator.push(context,
-                    // MaterialPageRoute(builder: (context) => HomePage()),);
+                    try{
+                      authService.value.resetPassword(email: emailText.text);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text("Email sent!",textAlign: TextAlign.center,),
+                          shape: StadiumBorder(),
+                          behavior: SnackBarBehavior.floating,
+                          margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                        ),
+                      ); 
+                      Navigator.pop(context,this);
+                    }on FirebaseAuthException catch(e){
+                      // setState(() {
+                      //   errorMessage= e.message ?? 'There is an error';
+                      // });
+                    }
                     }, 
                   ),
                 ],

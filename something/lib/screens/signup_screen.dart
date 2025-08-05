@@ -22,7 +22,7 @@ class _SignUpPageState extends State<SignUpPage> {
   bool _obscureText2 = true;
 
   String? validateEmail(String? email){
-    RegExp emailExp = RegExp(r'^[\w\.-]+@[ \w-]+\.\w{2,3}(\.\w{2,3})?$');
+    RegExp emailExp = RegExp(r'^[\w\.-]+@[\w-]+\.\w{2,3}(\.\w{2,3})?$');
     final isEmailValid = emailExp.hasMatch(email ?? '');
     if(!isEmailValid){
       return 'Incorrect format.Please enter a valid Email.';
@@ -229,12 +229,6 @@ class _SignUpPageState extends State<SignUpPage> {
                             }
                             
                           }
-                        //String userEmail = emailText.text.toString();
-                        //String userPassword = passwordText.text;
-                        // register();
-                        // print("Email =$emailText\nPassword=$passwordText");
-                        // Navigator.push(context,
-                        // MaterialPageRoute(builder: (context) => HomePage()),);
                         }, 
                       );
                     }
