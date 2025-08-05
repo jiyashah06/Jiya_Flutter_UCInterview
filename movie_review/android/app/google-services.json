@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "719995247413",
+    "project_id": "flutterunicodetask",
+    "storage_bucket": "flutterunicodetask.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719995247413:android:5c342a84af30d962944a7c",
+        "android_client_info": {
+          "package_name": "com.example.movie_review"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaIPkBR7lqziiutTBTwRoJJo340TbJQ5o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
